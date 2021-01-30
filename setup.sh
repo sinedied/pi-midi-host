@@ -43,12 +43,18 @@ sudo service udev restart
 sudo cp btmidi.service /lib/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable btmidi.service
-sudo systemctl start btmidi.service  
+sudo systemctl start btmidi.service
+
+# Create alias to show connected devices
+echo >> ~/.bashrc
+echo "alias midi='aconnect -l'" >> ~/.bashrc
+echo >> ~/.bashrc
 
 # Make FS read-only to avoid SD card corruption
 git clone https://gitlab.com/larsfp/rpi-readonly
 cd rpi-readonly
-sudo ./setup.sh
+sudo ./setup.sh -y
+cd ..
 
 # Turn on read-only mode
 # Use command "rw" to enable writes again
