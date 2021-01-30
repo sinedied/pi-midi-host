@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# Source: http://m635j520.blogspot.com/2017/01/using-raspberry-pi-as-midi-usb5-pin.html
+# Source: https://gist.github.com/chmanie/4f2838f4548d25b9c883f7d6d074f67c
 
 t = `aconnect -i -l`
 $devices = {}

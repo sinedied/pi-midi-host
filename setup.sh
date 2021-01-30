@@ -1,15 +1,21 @@
 #!/usr/bin/bash
 
-# TODO: curl
-
 # Enable SSH
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
+# Optimize for power efficiency and fast boot
+sudo cp config.txt /boot/ -y
+sudo cp cmdline.txt /boot/ -y
+
 # Prepare system
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install ruby git -y
+sudo apt-get install ruby -y
+
+# Install MIDI autoconnect script
+sudo cp connectall.rb /usr/local/bin/
+
 
 # FW for older Midisport devices
 sudo apt-get install midisport-firmware -y

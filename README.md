@@ -10,4 +10,9 @@ Tested with a RPi 3B, but should work with any model. MIDI Bluetooth will only w
 
 2. Create a new file named `ssh` in `/boot` folder of the SD card to enable SSH access.
 
-3. 
+3. SSH to your RPi with `ssh pi@<IP_ADDRESS>` (default password is `raspberry`)
+
+4. Run this command: `curl ...`
+
+5. Reboot
+
