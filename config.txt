@@ -1,0 +1,23 @@
+# Lower power consumption
+dtparam=i2c_arm=off
+dtparam=spi=off
+arm_freq=900
+arm_freq_max=900
+arm_freq_min=300
+gpu_freq=250
+core_freq_min=250
+sdram_freq_min=250
+over_voltage=-3
+over_voltage_min=-8
+temp_limit=60
+
+# Uncomment if not needed
+#dtoverlay=pi3-disable-bt
+#dtoverlay=pi3-disable-wifi
+
+# Faster boot
+initial_turbo=30
+start_x=0
+enable_uart=0
+disable_splash=1
+boot_delay=0
