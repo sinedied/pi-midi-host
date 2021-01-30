@@ -18,6 +18,10 @@ sudo cp connectall.rb /usr/local/bin/
 sudo cp 33-midiusb.rules /etc/udev/rules.d/
 sudo udevadm control --reload
 sudo service udev restart
+sudo cp midi.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable midi.service
+sudo systemctl start midi.service
 
 # FW for older Midisport devices
 sudo apt-get install midisport-firmware -y
@@ -32,3 +36,16 @@ cd bluez
 ./configure --enable-midi --prefix=/usr --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var
 make
 sudo make install
+cd ..
+sudo cp 44-bt.rules /etc/udev/rules.d/
+sudo udevadm control --reload
+sudo service udev restart
+
+# Make FS read-only to avoid SD card corruption
+git clone https://gitlab.com/larsfp/rpi-readonly
+cd rpi-readonly
+sudo ./setup.sh
+
+# Turn on read-only mode
+# Use command "rw" to enable writes again
+ro
