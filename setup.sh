@@ -15,7 +15,9 @@ sudo apt-get install ruby -y
 
 # Install MIDI autoconnect script
 sudo cp connectall.rb /usr/local/bin/
-
+sudo cp 33-midiusb.rules /etc/udev/rules.d/
+sudo udevadm control --reload
+sudo service udev restart
 
 # FW for older Midisport devices
 sudo apt-get install midisport-firmware -y
