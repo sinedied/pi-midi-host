@@ -40,6 +40,10 @@ cd ..
 sudo cp 44-bt.rules /etc/udev/rules.d/
 sudo udevadm control --reload
 sudo service udev restart
+sudo cp btmidi.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable btmidi.service
+sudo systemctl start btmidi.service  
 
 # Make FS read-only to avoid SD card corruption
 git clone https://gitlab.com/larsfp/rpi-readonly

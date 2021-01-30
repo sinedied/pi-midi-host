@@ -1,0 +1,18 @@
+[Unit]
+Description=MIDI Bluetooth connect
+After=bluetooth.target sound.target multi-user.target
+Requires=bluetooth.target sound.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/pi
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=btmidi
+Restart=always
+ExecStart=/usr/bin/btmidi-server -n "RPi-Bluetooth"
+
+[Install]
+WantedBy=multi-user.target
