@@ -2,7 +2,7 @@
 # Source: https://gist.github.com/chmanie/4f2838f4548d25b9c883f7d6d074f67c
 
 # Midi out filter
-$noMidiOutDevices = [/NTS-1/]
+$noMidiOutDevices = []
 $noMidiInDevices = []
 
 def matchList(list, s)
