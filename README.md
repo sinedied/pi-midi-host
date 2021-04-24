@@ -40,3 +40,4 @@ Additions:
 - MIDI in/out filters for specific devices
 - Bluetooth device connection instructions
 - Commands aliases
+- Drivers for M-Audio MIDISPORT 2x2
