@@ -3,6 +3,10 @@
 git clone github.com/sinedied/pi-midi-host
 cd pi-midi-host
 
+# Set new user password
+echo "First, let's set a new password for better security!"
+passwd
+
 # Enable SSH
 sudo systemctl enable ssh
 sudo systemctl start ssh
