@@ -14,6 +14,12 @@ Tested with a RPi 3B, but should work with any model. MIDI Bluetooth will only w
 
 > Note: the filesystem is switched to read-only at the end of the setup, to avoid SD card corruption when powering off. To switch it back on and off, use the `rw` and `ro` commands.
 
+### Aliases
+
+Use these alias to quickly manage your midi setup:
+- `midi`: show connected midi devices
+- `connect`: reconnect all midi devices
+
 ## How to connect bluetooth keyboards
 
 1. Disable SSP mode (if needed): `sudo hciconfig hci0 sspmode 0`
@@ -28,3 +34,9 @@ Tested with a RPi 3B, but should work with any model. MIDI Bluetooth will only w
 ## Credits
 
 Most of this work was based on instructions from [this post](https://neuma.studio/rpi-midi-complete.html).
+
+Additions:
+- All-in-one script to setup a new Pi
+- MIDI in/out filters for specific devices
+- Bluetooth device connection instructions
+- Commands aliases
