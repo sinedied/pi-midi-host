@@ -1,5 +1,8 @@
 #!/usr/bin/bash
 
+git clone github.com/sinedied/pi-midi-host
+cd pi-midi-host
+
 # Enable SSH
 sudo systemctl enable ssh
 sudo systemctl start ssh
