@@ -5,9 +5,9 @@
 $noMidiOutDevices = [/NTS-1/]
 $noMidiInDevices = []
 
-def matchList(list, device)
-  $list.each do |pattern|
-    match = pattern.match(device)
+def matchList(list, s)
+  list.each do |pattern|
+    match = pattern.match(s)
     unless match.nil?
       return true
     end
@@ -17,13 +17,16 @@ end
 
 t = `aconnect -i -l`
 $devices = {}
+$names = {}
 $device = 0
 t.lines.each do |l|
-  match = /client (\d*)\:((?:(?!client).)*)?/.match(l)
+  match = /client (\d*)\:(?:\s'(.*?)'\s.*?)?/.match(l)
+  name = ""
   # we skip empty lines and the "Through" port
   unless match.nil? || match[1] == '0' || /Through/=~l
     $device = match[1]
     $devices[$device] = []
+    $names[$device] = match[2]
   end
   match = /^\s+(\d+)\s/.match(l)
   if !match.nil? && !$devices[$device].nil?
@@ -37,8 +40,8 @@ $devices.each do |device1, ports1|
       ports2.each do |port2|
         # probably not a good idea to connect a port to itself
         isSame = (device1 == device2 && port1 == port2)
-        noOut = matchList($noMidiOutDevices, device1)
-        noIn = matchList($noMidiInDevices, device2)
+        noOut = matchList($noMidiOutDevices, $names[device1])
+        noIn = matchList($noMidiInDevices, $names[device2])
         unless isSame || noOut || noIn
           system "aconnect #{device1}:#{port1} #{device2}:#{port2}"
         end
