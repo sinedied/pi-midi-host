@@ -27,4 +27,4 @@ Tested with a RPi 3B, but should work with any model. MIDI Bluetooth will only w
 
 ## Credits
 
-Most of this work is based on instructions from [this post](https://neuma.studio/rpi-midi-complete.html).
+Most of this work was based on instructions from [this post](https://neuma.studio/rpi-midi-complete.html).

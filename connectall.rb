@@ -15,6 +15,9 @@ def matchList(list, s)
   return false
 end
 
+# unconnect everything
+system "aconnect -x"
+
 t = `aconnect -i -l`
 $devices = {}
 $names = {}
