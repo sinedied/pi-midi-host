@@ -1,4 +1,4 @@
-# pi-midi-host
+# :notes: pi-midi-host
 
 > Setup a Raspberry Pi as a headless MIDI USB host.
 
