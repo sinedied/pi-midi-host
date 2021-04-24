@@ -57,6 +57,11 @@ echo >> ~/.bashrc
 echo "alias midi='aconnect -l'" >> ~/.bashrc
 echo >> ~/.bashrc
 
+# Create alias to reconnect devices
+echo >> ~/.bashrc
+echo "alias connect='connectall.rb" >> ~/.bashrc
+echo >> ~/.bashrc
+
 # Make FS read-only to avoid SD card corruption
 #git clone https://gitlab.com/larsfp/rpi-readonly
 cd rpi-readonly
