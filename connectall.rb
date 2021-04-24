@@ -6,7 +6,7 @@
 # Add regular expression patterns to avoid connect a midi in/out for a
 # specific device. For example, to disable midi out for a Korg NTS-1,
 # add /NTS-1/ to the $noMidiOutDevices list.
-$noMidiOutDevices = []
+$noMidiOutDevices = [/NTS-1/]
 $noMidiInDevices = []
 
 def matchList(list, s)
