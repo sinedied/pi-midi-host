@@ -1,8 +1,5 @@
 #!/usr/bin/bash
 
-git clone github.com/sinedied/pi-midi-host
-cd pi-midi-host
-
 # Set new user password
 echo "First, let's set a new password for better security!"
 passwd
@@ -18,7 +15,11 @@ sudo cp cmdline.txt /boot/ -y
 # Prepare system
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install ruby -y
+sudo apt-get install git ruby -y
+
+# Clone this repo
+git clone github.com/sinedied/pi-midi-host
+cd pi-midi-host
 
 # Install MIDI autoconnect script
 sudo cp connectall.rb /usr/local/bin/
