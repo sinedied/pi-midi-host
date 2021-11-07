@@ -59,7 +59,7 @@ echo >> ~/.bashrc
 
 # Create alias to reconnect devices
 echo >> ~/.bashrc
-echo "alias connect='connectall.rb" >> ~/.bashrc
+echo "alias connect='connectall.rb'" >> ~/.bashrc
 echo >> ~/.bashrc
 
 # Make FS read-only to avoid SD card corruption
