@@ -8,10 +8,6 @@ passwd
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
-# Optimize for power efficiency and fast boot
-sudo cp config.txt /boot/ -y
-sudo cp cmdline.txt /boot/ -y
-
 # Prepare system
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -20,6 +16,10 @@ sudo apt-get install git ruby -y
 # Clone this repo
 git clone https://github.com/sinedied/pi-midi-host
 cd pi-midi-host
+
+# Optimize for power efficiency and fast boot
+sudo cp config.txt /boot/ -y
+sudo cp cmdline.txt /boot/ -y
 
 # Install MIDI autoconnect script
 sudo cp connectall.rb /usr/local/bin/
