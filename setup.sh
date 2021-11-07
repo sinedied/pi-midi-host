@@ -18,8 +18,8 @@ git clone https://github.com/sinedied/pi-midi-host
 cd pi-midi-host
 
 # Optimize for power efficiency and fast boot
-sudo cp config.txt /boot/ -y
-sudo cp cmdline.txt /boot/ -y
+sudo cp config.txt /boot/
+sudo cp cmdline.txt /boot/
 
 # Install MIDI autoconnect script
 sudo cp connectall.rb /usr/local/bin/
