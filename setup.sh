@@ -18,7 +18,7 @@ sudo apt-get upgrade -y
 sudo apt-get install git ruby -y
 
 # Clone this repo
-git clone github.com/sinedied/pi-midi-host
+git clone https://github.com/sinedied/pi-midi-host
 cd pi-midi-host
 
 # Install MIDI autoconnect script
