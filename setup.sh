@@ -71,4 +71,9 @@ cd ..
 
 # Turn on read-only mode
 # Use command "rw" to enable writes again
-ro
+#ro
+
+echo "The system will now reboot in read-only mode."
+echo "Use command \"rw\" to enable writes again."
+read -p "Press [enter] to reboot"
+sudo reboot
