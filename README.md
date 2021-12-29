@@ -33,7 +33,7 @@ Use these alias to quickly manage your midi setup:
 
 ## Network access
 
-You can SSH to the device without knowing its IP adress using `ssh pi@midihub.local` after initial setup.
+You can SSH to the device without knowing its IP address using `ssh pi@midihub.local` after initial setup.
 
 ## Credits
 
