@@ -31,6 +31,10 @@ Use these alias to quickly manage your midi setup:
 1. `connect <BT_ADDRESS>` if connection did not work
 1. `exit`
 
+## Network access
+
+You can SSH to the device without knowing its IP adress using `ssh pi@midihub.local` after initial setup.
+
 ## Credits
 
 Most of this work was based on instructions from [this post](https://neuma.studio/rpi-midi-complete.html).
