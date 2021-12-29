@@ -21,6 +21,11 @@ cd pi-midi-host
 sudo cp config.txt /boot/
 sudo cp cmdline.txt /boot/
 
+# Make device identifiable more easily on the network
+sudo apt-get install avahi-daemon -y
+sudo sed -i -- 's/raspberrypi/midihub/g' /etc/hostname /etc/hosts
+sudo hostname midihub
+
 # Install MIDI autoconnect script
 sudo cp connectall.rb /usr/local/bin/
 sudo cp 33-midiusb.rules /etc/udev/rules.d/
